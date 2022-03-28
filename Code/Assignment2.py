@@ -97,33 +97,34 @@ def similarity(player1, player2):
 
 def main():
 
-    #     #All the functions to do everything for the sentiment analysis
-    # allscores = []
-    # for athlete in athletelist:
-    #     playercomp = pullsent(athlete)
-    #     allscores.append(sentscore(playercomp))
-    # fullscores = dict(zip(athletelist, allscores))
-    # print ("{:<20} {:<10}".format('Athlete', 'Results'))
-    # for item in fullscores:
-    #     print(item, fullscores[item])
+    # All the functions to do everything for the sentiment analysis
+    allscores = []
+    for athlete in athletelist:
+        playercomp = pullsent(athlete)
+        allscores.append(sentscore(playercomp))
+    fullscores = dict(zip(athletelist, allscores))
+    print ("{:<20} {:<10}".format('Athlete', 'Results'))
+    for item in fullscores:
+        print(item, fullscores[item])
         
-    # summaryscores = []
-    # for athlete in athletelist:
-    #     playersum = pullinfo(athlete)
-    #     summaryscores.append(sentscore(playersum))
-    # fullsumsco = dict(zip(athletelist, summaryscores))
-    # print ("{:<20} {:<10}".format('Athlete', 'Results (Summary Only)'))
-    # for item in fullsumsco:
-    #     print(item, fullsumsco[item])
+    summaryscores = []
+    for athlete in athletelist:
+        playersum = pullinfo(athlete)
+        summaryscores.append(sentscore(playersum))
+    fullsumsco = dict(zip(athletelist, summaryscores))
+    print ("{:<20} {:<10}".format('Athlete', 'Results (Summary Only)'))
+    for item in fullsumsco:
+        print(item, fullsumsco[item])
 
   #  All the functions that pull the data, clean it, analyze it and tell us the most common
-    # for athlete in athletelist:
-    #     playerinfo = pullinfo(athlete)
-    #     cleanplayerinfo = removepunc(playerinfo)
-    #     infolist = listconv(cleanplayerinfo)
-    #     nocommons = removecommons(infolist)
-    #     wordlist = most_pop(nocommons)
-    #     print(athlete, wordlist)
+    for athlete in athletelist:
+        playerinfo = pullinfo(athlete)
+        cleanplayerinfo = removepunc(playerinfo)
+        infolist = listconv(cleanplayerinfo)
+        nocommons = removecommons(infolist)
+        wordlist = most_pop(nocommons)
+        print(athlete, wordlist)
+
     # Code to compare text similarities
 
     similarity('Lionel Messi', 'Christiano Ronaldo')
